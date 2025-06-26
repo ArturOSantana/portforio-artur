@@ -1,127 +1,117 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfólio | Artur Oliveira</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-  <script src="https://cdn.jsdelivr.net/npm/scrollreveal"></script>
-  <script src="scripts.js" defer></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfólio | Artur Santana</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
 </head>
+
 <body>
   <nav class="navbar">
-    <h1 class="logo">Artur Oliveira</h1>
-    <ul class="nav-links">
+    <div class="logo">Artur Santana</div>
+    <div class="hamburger" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <ul class="nav-links" id="navLinks">
       <li><a href="#sobre">Sobre</a></li>
-      <li><a href="#conhecimentos">Conhecimentos</a></li>
+      <li><a href="#skills">Skills</a></li>
       <li><a href="#cursos">Cursos</a></li>
       <li><a href="#experiencias">Experiências</a></li>
       <li><a href="#projetos">Projetos</a></li>
-      <li><a href="#blog">Blog</a></li>
       <li><a href="#contato">Contato</a></li>
     </ul>
-    <button id="toggle-theme" title="Alterar tema">🌙</button>
+    <button id="toggle-theme" onclick="toggleTheme()">☀</button>
   </nav>
 
   <header class="hero">
-    <div class="intro">
-      <img src="assets/avatar8bit.png" alt="Avatar 8-bit" class="avatar">
-      <h2>Desenvolvedor Full Stack em jornada</h2>
-      <p>Paixão por tecnologia, desafios e soluções criativas.</p>
-    </div>
+    <img src="avatar.png" alt="Avatar" class="avatar" />
+    <h1>Olá, sou Artur</h1>
+    <p>Desenvolvedor em formação apaixonado por tecnologia e dados</p>
   </header>
 
   <section id="sobre">
     <h2>Sobre Mim</h2>
-    <p>Sou Artur Oliveira, estudante de Análise e Desenvolvimento de Sistemas. Tenho experiência com dados, desenvolvimento web e suporte técnico. Busco evoluir constantemente em minha carreira tech.</p>
+    <p>Sou estudante de Análise e Desenvolvimento de Sistemas, com experiência em dados, desenvolvimento web e TI.</p>
   </section>
 
-  <section id="conhecimentos">
-    <h2>Conhecimentos</h2>
-    <div class="skills">
-      <div class="skill"><span>HTML</span><div class="bar"><div class="fill html"></div></div></div>
-      <div class="skill"><span>CSS</span><div class="bar"><div class="fill css"></div></div></div>
-      <div class="skill"><span>JavaScript</span><div class="bar"><div class="fill js"></div></div></div>
-      <div class="skill"><span>Python</span><div class="bar"><div class="fill python"></div></div></div>
+  <section id="skills" class="skills">
+    <h2>Skills</h2>
+    <div class="skill">
+      <span>HTML</span>
+      <div class="bar"><div class="fill html"></div></div>
+    </div>
+    <div class="skill">
+      <span>CSS</span>
+      <div class="bar"><div class="fill css"></div></div>
+    </div>
+    <div class="skill">
+      <span>JavaScript</span>
+      <div class="bar"><div class="fill js"></div></div>
+    </div>
+    <div class="skill">
+      <span>Python</span>
+      <div class="bar"><div class="fill python"></div></div>
     </div>
   </section>
 
   <section id="cursos">
-    <h2>Cursos e Certificações</h2>
+    <h2>Cursos</h2>
     <div class="cards">
-      <div class="card" onclick="abrirModal('cert1')">
-        <h3>Google - Fundamentos do Suporte Técnico</h3>
-        <p>Certificado em 2023 | Redes, Sistemas, Hardware</p>
-      </div>
-      <div class="card" onclick="abrirModal('cert2')">
-        <h3>Alura - Lógica de Programação</h3>
-        <p>JavaScript, Listas, Funções e estrutura de código</p>
-      </div>
+      <div class="card">Linux Unhatched - Cisco</div>
+      <div class="card">Google IT Support - Google</div>
+      <div class="card">Lógica com JS - Alura</div>
     </div>
   </section>
 
-  <section id="experiencias">
-    <h2>Experiências Profissionais</h2>
-    <div class="timeline">
-      <div class="entry">
-        <h3>ClearSale - Aprendiz em Análise de Dados</h3>
-        <p>Agosto/2024 - atual | Trabalho remoto com dados e indicadores</p>
-      </div>
-      <div class="entry">
-        <h3>Exército Brasileiro - Policial do Exército</h3>
-        <p>2023 - 2024 | TI, redes, formatação e infraestrutura</p>
-      </div>
+  <section id="experiencias" class="timeline">
+    <h2>Experiências</h2>
+    <div class="entry">
+      <strong>ClearSale</strong> - Jovem Aprendiz (2024 - atualmente)
+    </div>
+    <div class="entry">
+      <strong>Exército Brasileiro</strong> - Soldado e Suporte em TI (2023 - 2024)
+    </div>
+    <div class="entry">
+      <strong>Universidade Ibirapuera</strong> - Auxiliar Administrativo (2021 - 2022)
     </div>
   </section>
 
   <section id="projetos">
     <h2>Projetos</h2>
     <div class="cards">
-      <div class="card">
-        <h3>Site para Paróquia</h3>
-        <p>Formulários, banco de dados, painel admin</p>
-        <a href="#">Ver no GitHub</a>
-      </div>
-      <div class="card">
-        <h3>Dashboard de Indicadores</h3>
-        <p>Power BI com dados da empresa fictícia</p>
-        <a href="#">Ver no GitHub</a>
-      </div>
+      <div class="card">Sistema de Crisma com painel de administração</div>
+      <div class="card">Formulários com upload de arquivos (HTML/CSS/JS)</div>
+      <div class="card">Scripts em Python para organização de dados</div>
     </div>
-  </section>
-
-  <section id="blog">
-    <h2>Blog / Artigos</h2>
-    <p>Em breve, artigos sobre programação, carreira e tecnologia.</p>
   </section>
 
   <section id="contato">
-    <h2>Contato & Redes</h2>
-    <div class="socials">
-      <a href="https://github.com/artursantanadev" target="_blank">GitHub</a>
-      <a href="https://linkedin.com/in/artur-oliveira-de-santana" target="_blank">LinkedIn</a>
-      <a href="mailto:artur@email.com">E-mail</a>
-      <a href="assets/cv-artur.pdf" download>📄 Baixar CV</a>
-    </div>
-    <form id="form-contato">
-      <input type="text" placeholder="Seu nome" required>
-      <input type="email" placeholder="Seu e-mail" required>
-      <textarea placeholder="Sua mensagem" required></textarea>
+    <h2>Contato</h2>
+    <form>
+      <input type="text" placeholder="Seu nome" required />
+      <input type="email" placeholder="Seu e-mail" required />
+      <textarea placeholder="Sua mensagem" rows="5"></textarea>
       <button type="submit">Enviar</button>
     </form>
+    <div class="socials">
+      <a href="https://github.com/artursantanadev" target="_blank">GitHub</a>
+      <a href="https://www.linkedin.com/in/artur-oliveira-de-santana/" target="_blank">LinkedIn</a>
+    </div>
   </section>
 
-  <div id="modal-cert" class="modal hidden">
-    <div class="modal-content">
-      <span class="close" onclick="fecharModal()">&times;</span>
-      <img id="cert-img" src="" alt="Certificado">
-    </div>
-  </div>
-
   <footer>
-    <p>Portfólio de Artur Oliveira &copy; 2025</p>
-    <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})">🔝 Voltar ao topo</button>
+    <p>&copy; 2025 Artur Santana. Todos os direitos reservados.</p>
+    <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})">Voltar ao topo</button>
   </footer>
+
+  <div class="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">⬆</div>
+
+  <script src="script.js"></script>
 </body>
+
 </html>
