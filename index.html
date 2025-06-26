@@ -1,75 +1,127 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Portfólio Artur Oliveira</title>
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfólio | Artur Oliveira</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/scrollreveal"></script>
+  <script src="scripts.js" defer></script>
 </head>
 <body>
-  <header>
-    <h1>Olá, eu sou <span class="highlight">Artur Oliveira</span></h1>
-    <p>Aprendiz em Análise de Dados & Desenvolvedor Fullstack em formação</p>
-    <button id="btn-contact">Vamos Conversar!</button>
+  <nav class="navbar">
+    <h1 class="logo">Artur Oliveira</h1>
+    <ul class="nav-links">
+      <li><a href="#sobre">Sobre</a></li>
+      <li><a href="#conhecimentos">Conhecimentos</a></li>
+      <li><a href="#cursos">Cursos</a></li>
+      <li><a href="#experiencias">Experiências</a></li>
+      <li><a href="#projetos">Projetos</a></li>
+      <li><a href="#blog">Blog</a></li>
+      <li><a href="#contato">Contato</a></li>
+    </ul>
+    <button id="toggle-theme" title="Alterar tema">🌙</button>
+  </nav>
+
+  <header class="hero">
+    <div class="intro">
+      <img src="assets/avatar8bit.png" alt="Avatar 8-bit" class="avatar">
+      <h2>Desenvolvedor Full Stack em jornada</h2>
+      <p>Paixão por tecnologia, desafios e soluções criativas.</p>
+    </div>
   </header>
 
-  <section id="about">
-    <h2>Sobre mim</h2>
-    <p>
-      Estudante apaixonado por tecnologia, programação e inovação. Adoro
-      desafios e estou sempre buscando aprender algo novo para crescer
-      profissionalmente.
-    </p>
+  <section id="sobre">
+    <h2>Sobre Mim</h2>
+    <p>Sou Artur Oliveira, estudante de Análise e Desenvolvimento de Sistemas. Tenho experiência com dados, desenvolvimento web e suporte técnico. Busco evoluir constantemente em minha carreira tech.</p>
   </section>
 
-  <section id="projects">
+  <section id="conhecimentos">
+    <h2>Conhecimentos</h2>
+    <div class="skills">
+      <div class="skill"><span>HTML</span><div class="bar"><div class="fill html"></div></div></div>
+      <div class="skill"><span>CSS</span><div class="bar"><div class="fill css"></div></div></div>
+      <div class="skill"><span>JavaScript</span><div class="bar"><div class="fill js"></div></div></div>
+      <div class="skill"><span>Python</span><div class="bar"><div class="fill python"></div></div></div>
+    </div>
+  </section>
+
+  <section id="cursos">
+    <h2>Cursos e Certificações</h2>
+    <div class="cards">
+      <div class="card" onclick="abrirModal('cert1')">
+        <h3>Google - Fundamentos do Suporte Técnico</h3>
+        <p>Certificado em 2023 | Redes, Sistemas, Hardware</p>
+      </div>
+      <div class="card" onclick="abrirModal('cert2')">
+        <h3>Alura - Lógica de Programação</h3>
+        <p>JavaScript, Listas, Funções e estrutura de código</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="experiencias">
+    <h2>Experiências Profissionais</h2>
+    <div class="timeline">
+      <div class="entry">
+        <h3>ClearSale - Aprendiz em Análise de Dados</h3>
+        <p>Agosto/2024 - atual | Trabalho remoto com dados e indicadores</p>
+      </div>
+      <div class="entry">
+        <h3>Exército Brasileiro - Policial do Exército</h3>
+        <p>2023 - 2024 | TI, redes, formatação e infraestrutura</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="projetos">
     <h2>Projetos</h2>
-    <div class="project" tabindex="0">
-      <h3>Projeto 1: Dashboard de Análise de Dados</h3>
-      <p>Visualização interativa com Power BI e dados reais.</p>
-    </div>
-    <div class="project" tabindex="0">
-      <h3>Projeto 2: Site Fullstack com Node.js</h3>
-      <p>Aplicação web com backend em Node e frontend responsivo.</p>
-    </div>
-    <div class="project" tabindex="0">
-      <h3>Projeto 3: Automação de Relatórios</h3>
-      <p>Scripts para otimizar geração de relatórios usando Python.</p>
+    <div class="cards">
+      <div class="card">
+        <h3>Site para Paróquia</h3>
+        <p>Formulários, banco de dados, painel admin</p>
+        <a href="#">Ver no GitHub</a>
+      </div>
+      <div class="card">
+        <h3>Dashboard de Indicadores</h3>
+        <p>Power BI com dados da empresa fictícia</p>
+        <a href="#">Ver no GitHub</a>
+      </div>
     </div>
   </section>
 
-  <section id="contact" aria-label="Contato">
-    <h2>Contato</h2>
-    <form id="contact-form">
-      <label for="name">Nome</label>
-      <input type="text" id="name" name="name" placeholder="Seu nome" required />
+  <section id="blog">
+    <h2>Blog / Artigos</h2>
+    <p>Em breve, artigos sobre programação, carreira e tecnologia.</p>
+  </section>
 
-      <label for="email">Email</label>
-      <input
-        type="email"
-        id="email"
-        name="email"
-        placeholder="seu@email.com"
-        required
-      />
-
-      <label for="message">Mensagem</label>
-      <textarea
-        id="message"
-        name="message"
-        rows="4"
-        placeholder="Digite sua mensagem"
-        required
-      ></textarea>
-
+  <section id="contato">
+    <h2>Contato & Redes</h2>
+    <div class="socials">
+      <a href="https://github.com/artursantanadev" target="_blank">GitHub</a>
+      <a href="https://linkedin.com/in/artur-oliveira-de-santana" target="_blank">LinkedIn</a>
+      <a href="mailto:artur@email.com">E-mail</a>
+      <a href="assets/cv-artur.pdf" download>📄 Baixar CV</a>
+    </div>
+    <form id="form-contato">
+      <input type="text" placeholder="Seu nome" required>
+      <input type="email" placeholder="Seu e-mail" required>
+      <textarea placeholder="Sua mensagem" required></textarea>
       <button type="submit">Enviar</button>
     </form>
   </section>
 
-  <footer>
-    <p>© 2025 Artur Oliveira de Santana - Todos os direitos reservados</p>
-  </footer>
+  <div id="modal-cert" class="modal hidden">
+    <div class="modal-content">
+      <span class="close" onclick="fecharModal()">&times;</span>
+      <img id="cert-img" src="" alt="Certificado">
+    </div>
+  </div>
 
-  <script src="scripts.js"></script>
+  <footer>
+    <p>Portfólio de Artur Oliveira &copy; 2025</p>
+    <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})">🔝 Voltar ao topo</button>
+  </footer>
 </body>
 </html>

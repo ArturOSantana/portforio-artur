@@ -1,18 +1,30 @@
-document.getElementById("btn-contact").addEventListener("click", () => {document.getElementById("contact").scrollIntoView({behavior:"smooth"});
+// Animação simples ao rolar a página
+window.addEventListener('scroll', () => {
+  const elements = document.querySelectorAll('section, .card, .entry');
+  const triggerBottom = window.innerHeight * 0.85;
+
+  elements.forEach(el => {
+    const boxTop = el.getBoundingClientRect().top;
+    if (boxTop < triggerBottom) {
+      el.classList.add('show');
+    }
+  });
 });
 
-// Simulação de envio de formulário (sem backend)
-document.getElementById("contact-form").addEventListener("submit", (e) => {
+// Envio do formulário (simulado)
+document.getElementById('form-contato').addEventListener('submit', function (e) {
   e.preventDefault();
-  const name = e.target.name.value.trim();
-  const email = e.target.email.value.trim();
-  const message = e.target.message.value.trim();
+  alert('Mensagem enviada com sucesso! Em breve entrarei em contato.');
+  this.reset();
+});
 
-  if (!name || !email || !message) {
-    alert("Por favor, preencha todos os campos!");
-    return;
-  }
-
-  alert(`Obrigado pela mensagem, ${name}! Vou responder em breve.`);
-  e.target.reset();
+// Efeito de rolagem suave para links
+const navLinks = document.querySelectorAll('.nav-links a');
+navLinks.forEach(link => {
+  link.addEventListener('click', e => {
+    e.preventDefault();
+    const targetId = link.getAttribute('href').substring(1);
+    const targetSection = document.getElementById(targetId);
+    targetSection.scrollIntoView({ behavior: 'smooth' });
+  });
 });
