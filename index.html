@@ -2,39 +2,74 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfólio | Artur Oliveira</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfólio Artur Oliveira</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header>
-    <h1>Artur Oliveira de Santana</h1>
-    <p>Desenvolvedor Full Stack em formação</p>
+    <h1>Olá, eu sou <span class="highlight">Artur Oliveira</span></h1>
+    <p>Aprendiz em Análise de Dados & Desenvolvedor Fullstack em formação</p>
+    <button id="btn-contact">Vamos Conversar!</button>
   </header>
 
-  <section id="sobre">
+  <section id="about">
     <h2>Sobre mim</h2>
-    <p>Sou estudante de Desenvolvimento de Sistemas e apaixonado por tecnologia...</p>
+    <p>
+      Estudante apaixonado por tecnologia, programação e inovação. Adoro
+      desafios e estou sempre buscando aprender algo novo para crescer
+      profissionalmente.
+    </p>
   </section>
 
-  <section id="projetos">
-    <h2>Meus Projetos</h2>
-    <ul>
-      <li><a href="https://github.com/seuusuario/projeto1" target="_blank">To-do List em JavaScript</a></li>
-      <li><a href="https://github.com/seuusuario/projeto2" target="_blank">API com Node.js</a></li>
-    </ul>
+  <section id="projects">
+    <h2>Projetos</h2>
+    <div class="project" tabindex="0">
+      <h3>Projeto 1: Dashboard de Análise de Dados</h3>
+      <p>Visualização interativa com Power BI e dados reais.</p>
+    </div>
+    <div class="project" tabindex="0">
+      <h3>Projeto 2: Site Fullstack com Node.js</h3>
+      <p>Aplicação web com backend em Node e frontend responsivo.</p>
+    </div>
+    <div class="project" tabindex="0">
+      <h3>Projeto 3: Automação de Relatórios</h3>
+      <p>Scripts para otimizar geração de relatórios usando Python.</p>
+    </div>
   </section>
 
-  <section id="contato">
+  <section id="contact" aria-label="Contato">
     <h2>Contato</h2>
-    <p>Email: seuemail@gmail.com</p>
-    <p><a href="https://linkedin.com/in/seuusuario" target="_blank">LinkedIn</a></p>
+    <form id="contact-form">
+      <label for="name">Nome</label>
+      <input type="text" id="name" name="name" placeholder="Seu nome" required />
+
+      <label for="email">Email</label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        placeholder="seu@email.com"
+        required
+      />
+
+      <label for="message">Mensagem</label>
+      <textarea
+        id="message"
+        name="message"
+        rows="4"
+        placeholder="Digite sua mensagem"
+        required
+      ></textarea>
+
+      <button type="submit">Enviar</button>
+    </form>
   </section>
 
   <footer>
-    <p>© 2025 Artur Oliveira de Santana</p>
+    <p>© 2025 Artur Oliveira de Santana - Todos os direitos reservados</p>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="scripts.js"></script>
 </body>
 </html>
