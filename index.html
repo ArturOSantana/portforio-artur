@@ -1,117 +1,107 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfólio | Artur Santana</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css"/>
+    <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+/>
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+<script src="https://unpkg.com/scrollreveal"></script>
+   
 </head>
-
 <body>
-  <nav class="navbar">
-    <div class="logo">Artur Santana</div>
-    <div class="hamburger" onclick="toggleMenu()">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-    <ul class="nav-links" id="navLinks">
-      <li><a href="#sobre">Sobre</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#cursos">Cursos</a></li>
-      <li><a href="#experiencias">Experiências</a></li>
-      <li><a href="#projetos">Projetos</a></li>
-      <li><a href="#contato">Contato</a></li>
-    </ul>
-    <button id="toggle-theme" onclick="toggleTheme()">☀</button>
-  </nav>
+    <div id="particles-js"></div>
+    <header>
+        <nav>
+            <h1>Artur<span>.</span></h1>
+            <ul class="nav-links">
+                <li><a href="#sobre"> Sobre</a></li>
+                <li><a href="#projetos">Projetos</a></li>
+                <li><a href="#contato">Contato</a></li>
+                <li><a href="#habilidades">Habilidades</a></li>
+                <li> 
+                  <button id="theme-toggle" aria-label="mudar o tema">
+                    <i class="fa-solid fa-moon"></i>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="hero">
+            <h3>Desenvolvedor Fullstack em formação</h3>
+            <p>Transformando ideias em soluções digitais elegantes, acessiveise funcionais</p>
+        </section>
 
-  <header class="hero">
-    <img src="avatar.png" alt="Avatar" class="avatar" />
-    <h1>Olá, sou Artur</h1>
-    <p>Desenvolvedor em formação apaixonado por tecnologia e dados</p>
-  </header>
+       <section id="sobre">
+  <h3>Sobre mim</h3>
+  <p>
+    Olá! Eu sou Artur Oliveira de Santana, um Jovem Aprendiz Analista de Dados na ClearSale e estudante de Desenvolvimento de Sistemas.  
+    Apaixonado por tecnologia, estou sempre buscando aprender, inovar e crescer profissionalmente.  
+    Meu objetivo é construir uma carreira sólida aplicando minhas habilidades em soluções que façam a diferença.
+  </p>
+</section>
 
-  <section id="sobre">
-    <h2>Sobre Mim</h2>
-    <p>Sou estudante de Análise e Desenvolvimento de Sistemas, com experiência em dados, desenvolvimento web e TI.</p>
-  </section>
+        <section id="projetos">
+            <h3>Projetos</h3>
+            <div class="projetos-container">
+                <!-- Lembrar de colocar os projetos-->
+            </div>
+        </section>
 
-  <section id="skills" class="skills">
-    <h2>Skills</h2>
-    <div class="skill">
-      <span>HTML</span>
-      <div class="bar"><div class="fill html"></div></div>
-    </div>
-    <div class="skill">
-      <span>CSS</span>
-      <div class="bar"><div class="fill css"></div></div>
-    </div>
-    <div class="skill">
-      <span>JavaScript</span>
-      <div class="bar"><div class="fill js"></div></div>
-    </div>
-    <div class="skill">
-      <span>Python</span>
-      <div class="bar"><div class="fill python"></div></div>
-    </div>
-  </section>
+   <section id="timeline">
+  <h3>Minha trajetória</h3>
+  <div class="timeline">
 
-  <section id="cursos">
-    <h2>Cursos</h2>
-    <div class="cards">
-      <div class="card">Linux Unhatched - Cisco</div>
-      <div class="card">Google IT Support - Google</div>
-      <div class="card">Lógica com JS - Alura</div>
+    <div class="timeline-item left">
+      <div class="content">
+        <h4>2025 - Transição para Desenvolvedor</h4>
+        <p>Foco em backend e fullstack, com projetos em Node, TypeScript e MySQL.</p>
+      </div>
     </div>
-  </section>
 
-  <section id="experiencias" class="timeline">
-    <h2>Experiências</h2>
-    <div class="entry">
-      <strong>ClearSale</strong> - Jovem Aprendiz (2024 - atualmente)
+    <div class="timeline-item right">
+      <div class="content">
+        <h4>2024 - Projetos Freelance</h4>
+        <p>Criação de sites para paróquias e pequenos negócios.</p>
+      </div>
     </div>
-    <div class="entry">
-      <strong>Exército Brasileiro</strong> - Soldado e Suporte em TI (2023 - 2024)
+
+    <div class="timeline-item left">
+      <div class="content">
+        <h4>2023 - Curso Técnico</h4>
+        <p>Início do curso Técnico em Desenvolvimento de Sistemas.</p>
+      </div>
     </div>
-    <div class="entry">
-      <strong>Universidade Ibirapuera</strong> - Auxiliar Administrativo (2021 - 2022)
+
+    <div class="timeline-item right">
+      <div class="content">
+        <h4>2022 - Início na ClearSale</h4>
+        <p>Ingresso como Jovem Aprendiz em Análise de Dados.</p>
+      </div>
     </div>
-  </section>
 
-  <section id="projetos">
-    <h2>Projetos</h2>
-    <div class="cards">
-      <div class="card">Sistema de Crisma com painel de administração</div>
-      <div class="card">Formulários com upload de arquivos (HTML/CSS/JS)</div>
-      <div class="card">Scripts em Python para organização de dados</div>
-    </div>
-  </section>
+     </div>
+   </section>
+  </main>
+     
 
-  <section id="contato">
-    <h2>Contato</h2>
-    <form>
-      <input type="text" placeholder="Seu nome" required />
-      <input type="email" placeholder="Seu e-mail" required />
-      <textarea placeholder="Sua mensagem" rows="5"></textarea>
-      <button type="submit">Enviar</button>
-    </form>
-    <div class="socials">
-      <a href="https://github.com/artursantanadev" target="_blank">GitHub</a>
-      <a href="https://www.linkedin.com/in/artur-oliveira-de-santana/" target="_blank">LinkedIn</a>
-    </div>
-  </section>
+  <footer id="contato">
+  <p>Feito com 💙 por Artur O. de Santana</p>
+  <div class="social">
+    <a href="https://github.com/seuusuario" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+      <i class="fab fa-github"></i>
+    </a>
+    <a href="https://linkedin.com/in/seuusuario" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+      <i class="fab fa-linkedin"></i>
+    </a>
+  </div>
+</footer>
 
-  <footer>
-    <p>&copy; 2025 Artur Santana. Todos os direitos reservados.</p>
-    <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})">Voltar ao topo</button>
-  </footer>
-
-  <div class="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">⬆</div>
-
-  <script src="script.js"></script>
+    
+  <script src="scripts.js"></script>
 </body>
-
 </html>
