@@ -20,30 +20,71 @@
             <h1>Artur<span>.</span></h1>
             <ul class="nav-links">
                 <li><a href="#sobre"> Sobre</a></li>
-                <li><a href="#projetos">Projetos</a></li>
-                <li><a href="#contato">Contato</a></li>
                 <li><a href="#habilidades">Habilidades</a></li>
+                <li><a href="#projetos">Projetos</a></li>
+                <li><a href="#certificacoes">Certificações</a></li>
+                <li><a href="#timeline">Minha Trajetória</a></li>
+                <li><a href="#contato">Contato</a></li>
                 <li> 
                   <button id="theme-toggle" aria-label="mudar o tema">
                     <i class="fa-solid fa-moon"></i>
-                </li>
+                 </button>
+                    </li>
             </ul>
         </nav>
     </header>
     <main>
         <section id="hero">
+          <div class="hero-content">
+            <div class="avatar-8bit">
+              <img src="img/pixelartur.png" alt="Avatar 8-bit art">
+            </div>
+            <div class="hero-text">
+            <h2>Olá, eu sou Artur Oliveira de Santana</h2>
             <h3>Desenvolvedor Fullstack em formação</h3>
-            <p>Transformando ideias em soluções digitais elegantes, acessiveise funcionais</p>
+            <blockquote>
+              <p>"Trabalhe como tudo depende de você; confie como tudo depende de Deus."</p>
+              <span class="autor">– Santo Agostinho</span>
+              <p>Transformando ideias em soluções digitais elegantes, acessíveis e funcionais</p>
+            </div>
+          </div>
         </section>
 
-       <section id="sobre">
-  <h3>Sobre mim</h3>
-  <p>
-    Olá! Eu sou Artur Oliveira de Santana, um Jovem Aprendiz Analista de Dados na ClearSale e estudante de Desenvolvimento de Sistemas.  
-    Apaixonado por tecnologia, estou sempre buscando aprender, inovar e crescer profissionalmente.  
-    Meu objetivo é construir uma carreira sólida aplicando minhas habilidades em soluções que façam a diferença.
-  </p>
+     <section id="sobre">
+  <h3>Sobre Mim</h3>
+  <div class="sobre-container">
+    <div class="sobre-img">
+      <img src="img/fotosobre.jpeg" alt="Foto de Artur Oliveira de Santana">
+    </div>
+    <div class="sobre-content">
+      <p>
+        <strong>"A fé e a razão são como duas asas pelas quais o espírito humano se eleva à contemplação da verdade."</strong><br>
+        <em>– São João Paulo II</em>
+      </p>
+      <p>
+        Me chamo <strong>Artur Oliveira de Santana</strong> e sou apaixonado por tecnologia, aprendizado constante e por tudo que envolve desenvolvimento de sistemas. 
+        Atualmente atuo na área de <strong>Análise de Dados</strong> na ClearSale.
+      </p>
+      <p>
+        Busco uma carreira sólida que me permita crescer como pessoa e profissional, enquanto contribuo com projetos que fazem a diferença.
+      </p>
+      <p>
+        Gosto de transformar ideias em soluções, explorar novas tecnologias e colaborar com times criativos. Estou sempre em busca de novos desafios que unam <strong>tecnologia, propósito e impacto real</strong>.
+      </p>
+      <a href="curriculo-artur.pdf" class="btn-curriculo" download>
+  <i class="fa-solid fa-download"></i> Baixar Currículo
+</a>
+    </div>
+  </div>
 </section>
+
+<section id="habilidades">
+  <h3>Habilidades</h3>
+  <div class="habilidades-container">
+
+</section>
+
+
 
         <section id="projetos">
             <h3>Projetos</h3>
@@ -51,6 +92,12 @@
                 <!-- Lembrar de colocar os projetos-->
             </div>
         </section>
+
+        <section id="certificacoes">
+  <h3>Certificações</h3>
+  <div class="certificacoes-container" id="certificacoes-container"> 
+    </div>
+</section>
 
    <section id="timeline">
   <h3>Minha trajetória</h3>
@@ -86,6 +133,12 @@
 
      </div>
    </section>
+   
+
+    <!-- Repita para outros certificados -->
+    
+  </div>
+</section>
   </main>
      
 
@@ -103,5 +156,10 @@
 
     
   <script src="scripts.js"></script>
+  <script>
+  ScrollReveal().reveal('.hero-text', { delay: 300, origin: 'bottom', distance: '30px', duration: 800 });
+  ScrollReveal().reveal('.sobre-container', { delay: 200, origin: 'bottom', distance: '30px', duration: 800 });
+  ScrollReveal().reveal('.timeline-item', { interval: 200, origin: 'left', distance: '40px', duration: 800 });
+</script> 
 </body>
 </html>

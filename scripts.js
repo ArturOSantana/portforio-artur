@@ -42,8 +42,11 @@ document.addEventListener("DOMContentLoaded", () => {
     { nome: "CSS3", icone: "fab fa-css3-alt" },
     { nome: "MySQL", icone: "fas fa-database" },
     { nome: "Linux", icone: "fab fa-linux" },
+    {nome: "React", icone: "fab fa-react" },
+    {nome: "windows", icone: "fab fa-windows" },
     { nome: "TypeScript", icone: "fas fa-code" },
-    { nome: "Git", icone: "fab fa-git-alt" }
+    { nome: "Git", icone: "fab fa-git-alt" },
+    { nome: "Python", icone: "fab fa-python" },
   ];
 
   const habilidadesContainer = document.querySelector(".habilidades-container");
@@ -196,3 +199,74 @@ particlesJS('particles-js',
     "retina_detect": true
   }
 );
+
+document.querySelectorAll('.btn-vermais').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const info = btn.nextElementSibling;
+    const isOpen = info.style.display === 'block';
+
+    info.style.display = isOpen ? 'none' : 'block';
+    btn.textContent = isOpen ? 'Ver mais' : 'Ver menos';
+  });
+});
+
+
+//Certificações
+document.addEventListener("DOMContentLoaded", function() {
+  const certificacoes = [
+    {
+      titulo: "Linux Unhatched",
+      emissor: "Cisco Networking Academy",
+      ano: 2024,
+      icone: "fab fa-linux",
+      descricao: "Introdução ao sistema Linux: comandos, permissões, diretórios e administração.",
+      link: "https://www.example.com/linux-cert",
+      imagem: "img/certificados/linux.png"
+    },
+    {
+      titulo: "JavaScript Moderno",
+      emissor: "Alura",
+      ano: 2023,
+      icone: "fab fa-js",
+      descricao: "JavaScript ES6+, DOM, eventos e programação assíncrona.",
+      link: "https://www.example.com/js-cert"
+    },
+    {
+      titulo: "Node.js Backend",
+      emissor: "DIO",
+      ano: 2024,
+      icone: "fab fa-node-js",
+      descricao: "Desenvolvimento de APIs REST, Express.js, autenticação JWT.",
+      link: "https://www.example.com/node-cert"
+    }
+  ];
+
+  const container = document.getElementById("certificacoes-container");
+
+  certificacoes.forEach(cert => {
+    const card = document.createElement("div");
+    card.classList.add("certificacao-card");
+
+    card.innerHTML = `
+      <h4>${cert.icone ? `<i class="${cert.icone}" style="color:#00b894;font-size:2rem"></i> ` : ""}${cert.titulo}</h4>
+      <small><strong>${cert.emissor}</strong> - ${cert.ano}</small>
+      ${cert.imagem ? `<img src="${cert.imagem}" alt="Certificado de ${cert.titulo}">` : ""}
+      <button class="btn-vermais">Ver mais</button>
+      <div class="cert-info">
+        <p>${cert.descricao}</p>
+        <a href="${cert.link}" target="_blank" rel="noopener noreferrer">🔗 Ver Certificado</a>
+      </div>
+    `;
+    container.appendChild(card);
+  });
+
+  // Interação "Ver mais"
+  container.querySelectorAll('.btn-vermais').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const info = btn.nextElementSibling;
+      const isOpen = info.style.display === 'block';
+      info.style.display = isOpen ? 'none' : 'block';
+      btn.textContent = isOpen ? 'Ver mais' : 'Ver menos';
+    });
+  });
+});
